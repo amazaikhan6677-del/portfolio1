@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>ZAKA ULLAH — AI & Machine Learning Engineer</title>
+  <meta name="description" content="AI & ML Engineer building predictive models and modern web solutions. Available for hire."/>
+  <meta name="theme-color" content="#05080f"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@300;400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+  <link rel="stylesheet" href="static/css/style.css"/>
+  <style>
+    /* ══ MOBILE RESPONSIVE FIXES ══ */
+    html,body{overflow-x:hidden;min-width:320px;}
+    *{box-sizing:border-box;}
+
+    /* Navbar */
+    .navbar{left:0;right:0;width:100%;transform:translateZ(0);}
+    .nav-wrap{width:100%;padding:0 1.1rem;}
+    .nav-logo{flex-shrink:0;}
+    .logo-name{font-size:.82rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:120px;}
+
+    /* All images */
+    img{max-width:100%;height:auto;display:block;}
+
+    /* Hero numbers */
+    .hero-nums{display:flex!important;flex-wrap:nowrap;align-items:center;width:auto;max-width:100%;}
+
+    /* Project image — always visible */
+    .pfc-right{display:block!important;width:100%;}
+    .pimg-wrap{width:100%!important;overflow:hidden;border-radius:12px;}
+    .pimg-wrap img{width:100%!important;object-fit:cover!important;display:block!important;}
+
+    /* Project cards */
+    .pcimg img{width:100%!important;height:100%!important;object-fit:cover!important;display:block!important;}
+
+    /* CV iframe */
+    .cv-iframe-wrap{
+      width:100%;border-radius:16px;overflow:hidden;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.03);
+    }
+    .cv-iframe-wrap iframe{
+      width:100%;height:700px;border:none;display:block;
+    }
+
+    /* ── MOBILE ONLY ── */
+    @media(max-width:767px){
+      .sec{padding:4.5rem 0!important;}
+      .container{padding:0 1rem!important;}
+      .hero{padding:6.5rem 1rem 4rem!important;}
+      .hero-inner{display:flex!important;flex-direction:column!important;gap:2rem;align-items:center;text-align:center;}
+      .hero-left,.hero-right{width:100%;}
+      .hero-right{display:flex;justify-content:center;}
+      .hero-h1{font-size:clamp(2rem,8vw,2.8rem)!important;text-align:center!important;line-height:1.05;}
+      .hero-desc{text-align:center!important;margin:0 auto 1.5rem!important;font-size:.87rem;}
+      .hero-badge{font-size:.6rem;padding:.3rem .7rem;}
+      .hero-sub{justify-content:center!important;font-size:.92rem;}
+      .hero-btns{justify-content:center!important;flex-wrap:wrap;gap:.6rem;}
+      .hero-nums{justify-content:center!important;padding:.85rem 1rem;gap:.85rem;}
+      .nval{font-size:1.35rem!important;}
+      .nlbl{font-size:.56rem!important;}
+      .nsep{width:1px;height:28px;}
+      .photo-wrap{width:220px!important;height:260px!important;}
+      .fc1,.fc2,.pb-ai,.pb-ml{display:none!important;}
+      .pr1{inset:-10px!important;}
+      .pr2{inset:-20px!important;}
+      .about-grid{display:flex!important;flex-direction:column!important;gap:2rem;}
+      .aimg-wrap{width:100%!important;max-width:100%!important;}
+      .aimg-frame img{height:260px!important;}
+      .aimg-extra,.aexp{display:none!important;}
+      .about-h{font-size:1.4rem!important;}
+      .pillars{grid-template-columns:1fr!important;}
+      .skills-layout{display:flex!important;flex-direction:column!important;gap:1.5rem;}
+      .tech-grid{grid-template-columns:repeat(3,1fr)!important;gap:.45rem;}
+      .tcard{padding:.65rem .3rem!important;}
+      /* AI Project — image UPAR text NEECHE on mobile */
+      .pfc-inner{display:flex!important;flex-direction:column!important;gap:1.5rem;padding:1.2rem!important;}
+      .pfc-right{order:-1;}
+      .pimg-wrap{height:190px!important;}
+      .pimg-wrap img{height:190px!important;}
+      .ptitle{font-size:1.25rem!important;}
+      .pdesc{font-size:.82rem!important;}
+      .pmetrics{gap:.75rem;flex-wrap:wrap;}
+      .pmval{font-size:1.1rem!important;}
+      .pgrid{display:flex!important;flex-direction:column!important;gap:1.35rem!important;}
+      .pcimg{height:185px!important;}
+      .pbtns,.pclinks{flex-wrap:wrap;gap:.5rem;}
+      .contact-layout{display:flex!important;flex-direction:column!important;gap:2rem;}
+      .ctimg-wrap img{height:185px!important;}
+      .cf-wrap{padding:1.2rem!important;}
+      .cf-row{display:flex!important;flex-direction:column!important;gap:.8rem;}
+      .cv-iframe-wrap iframe{height:480px!important;}
+      .cv-acts{flex-direction:column!important;align-items:center;gap:.7rem;}
+      .footer-top{display:flex!important;flex-direction:column!important;gap:2rem!important;}
+      .footer-bot{flex-direction:column!important;text-align:center;gap:.35rem;}
+      .sec-h2{font-size:clamp(1.5rem,5vw,2.2rem)!important;}
+      .btn{padding:.6rem 1.25rem!important;font-size:.8rem!important;}
+      .btn-sm{padding:.46rem .9rem!important;font-size:.74rem!important;}
+    }
+
+    /* ── DESKTOP ── */
+    @media(min-width:768px){
+      .hero-inner{display:grid!important;grid-template-columns:1fr 1fr!important;text-align:left!important;gap:3.5rem;}
+      .hero-h1{text-align:left!important;}
+      .hero-desc{text-align:left!important;margin:0 0 2rem!important;}
+      .hero-sub,.hero-btns,.hero-nums{justify-content:flex-start!important;}
+      .nval{font-size:1.7rem!important;}
+      .nlbl{font-size:.68rem!important;}
+      .photo-wrap{width:380px!important;height:440px!important;}
+      .fc1,.fc2{display:flex!important;}
+      .pb-ai,.pb-ml{display:flex!important;}
+      .pr1{inset:-22px!important;}
+      .pr2{inset:-44px!important;}
+      .about-grid{display:grid!important;grid-template-columns:1fr 1.1fr!important;}
+      .aimg-frame img{height:400px!important;}
+      .aexp{display:block!important;}
+      .pillars{grid-template-columns:1fr 1fr!important;}
+      .skills-layout{display:grid!important;grid-template-columns:1fr 1fr!important;}
+      .tech-grid{grid-template-columns:repeat(4,1fr)!important;}
+      .pfc-inner{display:grid!important;grid-template-columns:1.1fr 1fr!important;gap:2.75rem;padding:2.25rem!important;}
+      .pfc-right{order:0;}
+      .pimg-wrap{height:100%!important;min-height:260px!important;}
+      .pimg-wrap img{height:100%!important;min-height:260px!important;}
+      .pgrid{display:grid!important;grid-template-columns:1fr 1fr!important;}
+      .contact-layout{display:grid!important;grid-template-columns:1fr 1.3fr!important;}
+      .footer-top{display:grid!important;grid-template-columns:1.4fr 1fr 1fr!important;}
+      .cf-row{display:grid!important;grid-template-columns:1fr 1fr!important;}
+      .sec{padding:7rem 0!important;}
+      .container{padding:0 1.75rem!important;}
+    }
+  </style>
+</head>
+<body>
+
+<div id="spb"></div>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+  <div class="pl-inner">
+    <div class="pl-logo">ZU</div>
+    <div class="pl-bar"><div class="pl-fill"></div></div>
+    <div class="pl-txt">Loading...</div>
+  </div>
+</div>
+
+<div class="cur-dot" id="curDot"></div>
+<div class="cur-ring" id="curRing"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-wrap">
+    <a href="#home" class="nav-logo">
+      <div class="logo-mark">ZU</div>
+      <div>
+        <div class="logo-name">ZAKA ULLAH</div>
+        <div class="logo-role">AI Engineer</div>
+      </div>
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home"     class="nav-item active">Home</a></li>
+      <li><a href="#about"    class="nav-item">About</a></li>
+      <li><a href="#skills"   class="nav-item">Skills</a></li>
+      <li><a href="#projects" class="nav-item">Projects</a></li>
+      <li><a href="#cv"       class="nav-item">Resume</a></li>
+      <li><a href="#contact"  class="nav-item">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Hire Me</a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <canvas id="hCanvas"></canvas>
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge" data-aos="fade-down">
+        <span class="bpulse"></span>Open to Work — Internships &amp; Freelance
+      </div>
+      <h1 class="hero-h1" data-aos="fade-up" data-aos-delay="80">
+        <span>Building</span><span>Intelligent</span><span class="gt">Systems.</span>
+      </h1>
+      <div class="hero-sub" data-aos="fade-up" data-aos-delay="180">
+        <span class="sub-lbl">I'm a</span>
+        <span id="typedEl" class="typed-el"></span>
+        <span class="tcursor">_</span>
+      </div>
+      <p class="hero-desc" data-aos="fade-up" data-aos-delay="260">
+        AI &amp; Machine Learning Engineer crafting predictive models, data pipelines, and modern web solutions that deliver real-world impact.
+      </p>
+      <div class="hero-btns" data-aos="fade-up" data-aos-delay="340">
+        <a href="#projects" class="btn btn-p">
+          <span>Explore Work</span>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg>
+        </a>
+        <a href="public/cv.pdf" download class="btn btn-o">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download CV
+        </a>
+      </div>
+      <div class="hero-nums" data-aos="fade-up" data-aos-delay="420">
+        <div class="nitem"><span class="nval" data-count="89">0</span><span class="nlbl">% Accuracy</span></div>
+        <div class="nsep"></div>
+        <div class="nitem"><span class="nval" data-count="3">0</span><span class="nlbl">+ AI Projects</span></div>
+        <div class="nsep"></div>
+        <div class="nitem"><span class="nval" data-count="5">0</span><span class="nlbl">+ Clients</span></div>
+      </div>
+    </div>
+    <div class="hero-right" data-aos="fade-left" data-aos-delay="150">
+      <div class="photo-wrap">
+        <div class="photo-ring pr1"></div>
+        <div class="photo-ring pr2"></div>
+        <div class="photo-box">
+          <img src="static/images/zaka.png" alt="ZAKA ULLAH" loading="eager" fetchpriority="high"/>
+          <div class="photo-overlay"></div>
+        </div>
+        <div class="pbadge pb-ai">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          AI Engineer
+        </div>
+        <div class="pbadge pb-ml"><span class="mldot"></span>ML Ready</div>
+        <div class="fc fc1"><span class="fci">🧠</span><div><strong>89.6% Accuracy</strong><span>Diabetes Model</span></div></div>
+        <div class="fc fc2"><span class="fci">⚡</span><div><strong>Python Expert</strong><span>Scikit-learn · Pandas</span></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="smouse"><div class="sdot"></div></div><span>Scroll</span></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about sec">
+  <div class="container">
+    <div class="sec-label" data-aos="fade-up"><span class="lline"></span>About Me<span class="lline"></span></div>
+    <div class="about-grid">
+      <div class="aimg-wrap" data-aos="fade-right">
+        <div class="aimg-frame">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80&fit=crop" alt="ZAKA ULLAH" loading="lazy" style="width:100%;height:400px;object-fit:cover;object-position:top;"/>
+          <div class="aimg-cap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Real-world AI solutions
+          </div>
+        </div>
+        <div class="aexp"><div class="aexp-n">1+</div><div class="aexp-t">Years of<br/>Experience</div></div>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="100">
+        <h2 class="about-h">I Build AI That Solves<br/><span class="gt">Real Problems.</span></h2>
+        <p class="about-p">I'm <strong>ZAKA ULLAH</strong> — an AI & Machine Learning Engineer passionate about designing systems that learn from data and automate complex decision-making. My focus is on building accurate, production-ready ML models that create measurable impact.</p>
+        <p class="about-p">Beyond AI, I develop clean and conversion-focused web experiences for businesses — from home maintenance platforms to service-booking websites.</p>
+        <div class="pillars">
+          <div class="pillar"><span class="picon">🤖</span><div class="pbody"><strong>Machine Learning</strong><span>Model training, evaluation &amp; deployment</span></div></div>
+          <div class="pillar"><span class="picon">📊</span><div class="pbody"><strong>Data Analysis</strong><span>Pandas, Matplotlib, Seaborn</span></div></div>
+          <div class="pillar"><span class="picon">🌐</span><div class="pbody"><strong>Web Solutions</strong><span>Responsive, client-focused websites</span></div></div>
+          <div class="pillar"><span class="picon">🚀</span><div class="pbody"><strong>Deployment</strong><span>Vercel, GitHub, production-ready</span></div></div>
+        </div>
+        <div class="about-acts">
+          <a href="#contact" class="btn btn-p">Get In Touch</a>
+          <a href="public/cv.pdf" target="_blank" class="btn-t">
+            View Resume
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="skills sec">
+  <div class="container">
+    <div class="sec-label" data-aos="fade-up"><span class="lline"></span>Expertise<span class="lline"></span></div>
+    <h2 class="sec-h2" data-aos="fade-up" data-aos-delay="50">Skills &amp; <span class="gt">Technologies</span></h2>
+    <p class="sec-p" data-aos="fade-up" data-aos-delay="100">The tools I use to build intelligent systems and digital products.</p>
+    <div class="skills-layout">
+      <div class="sbars-col">
+        <div class="sgroup" data-aos="fade-up" data-aos-delay="100">
+          <div class="ghead"><span class="gicon">🧠</span>AI / Machine Learning</div>
+          <div class="blist">
+            <div><div class="brow-meta"><span>Python</span><span class="bpct">92%</span></div><div class="btrack"><div class="bfill" style="--w:92%"></div></div></div>
+            <div><div class="brow-meta"><span>Machine Learning</span><span class="bpct">85%</span></div><div class="btrack"><div class="bfill" style="--w:85%"></div></div></div>
+            <div><div class="brow-meta"><span>Data Analysis</span><span class="bpct">88%</span></div><div class="btrack"><div class="bfill" style="--w:88%"></div></div></div>
+            <div><div class="brow-meta"><span>Pandas &amp; NumPy</span><span class="bpct">90%</span></div><div class="btrack"><div class="bfill" style="--w:90%"></div></div></div>
+            <div><div class="brow-meta"><span>Scikit-learn</span><span class="bpct">85%</span></div><div class="btrack"><div class="bfill" style="--w:85%"></div></div></div>
+            <div><div class="brow-meta"><span>Matplotlib / Seaborn</span><span class="bpct">82%</span></div><div class="btrack"><div class="bfill" style="--w:82%"></div></div></div>
+          </div>
+        </div>
+        <div class="sgroup" data-aos="fade-up" data-aos-delay="180">
+          <div class="ghead"><span class="gicon">🌐</span>Web Development</div>
+          <div class="blist">
+            <div><div class="brow-meta"><span>HTML5 / CSS3</span><span class="bpct">90%</span></div><div class="btrack"><div class="bfill web" style="--w:90%"></div></div></div>
+            <div><div class="brow-meta"><span>JavaScript (ES6+)</span><span class="bpct">78%</span></div><div class="btrack"><div class="bfill web" style="--w:78%"></div></div></div>
+            <div><div class="brow-meta"><span>Flask / React</span><span class="bpct">75%</span></div><div class="btrack"><div class="bfill web" style="--w:75%"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="scards-col" data-aos="fade-left" data-aos-delay="120">
+        <div class="tech-grid">
+          <div class="tcard"><span class="ticon">🐍</span><span>Python</span></div>
+          <div class="tcard"><span class="ticon">⚙️</span><span>Scikit-learn</span></div>
+          <div class="tcard"><span class="ticon">🐼</span><span>Pandas</span></div>
+          <div class="tcard"><span class="ticon">🔢</span><span>NumPy</span></div>
+          <div class="tcard"><span class="ticon">📓</span><span>Jupyter</span></div>
+          <div class="tcard"><span class="ticon">📊</span><span>Matplotlib</span></div>
+          <div class="tcard"><span class="ticon">🐙</span><span>GitHub</span></div>
+          <div class="tcard"><span class="ticon">▲</span><span>Vercel</span></div>
+          <div class="tcard"><span class="ticon">🎨</span><span>HTML/CSS</span></div>
+          <div class="tcard"><span class="ticon">⚡</span><span>JavaScript</span></div>
+          <div class="tcard"><span class="ticon">🌶️</span><span>Flask</span></div>
+          <div class="tcard"><span class="ticon">🔵</span><span>VS Code</span></div>
+        </div>
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="260">
+          <span class="cert-icon">🏆</span>
+          <div class="cert-info">
+            <strong>31st Kangaroo Mathematics Contest</strong>
+            <span>International certification · 2021</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects sec">
+  <div class="container">
+    <div class="sec-label" data-aos="fade-up"><span class="lline"></span>Portfolio<span class="lline"></span></div>
+    <h2 class="sec-h2" data-aos="fade-up" data-aos-delay="50">Featured <span class="gt">Projects</span></h2>
+    <p class="sec-p" data-aos="fade-up" data-aos-delay="100">AI systems and web solutions built for real impact.</p>
+
+    <!-- AI PROJECT -->
+    <div class="pfc" data-aos="fade-up" data-aos-delay="120">
+      <div class="pfc-stripe"></div>
+      <div class="pfc-inner">
+        <div class="pfc-left">
+          <div class="ptag"><span class="tdot"></span>AI / Machine Learning</div>
+          <h3 class="ptitle">Diabetes Prediction System</h3>
+          <p class="pdesc">A production-quality ML classifier that predicts diabetes risk from clinical biomarkers. Trained on the PIMA Indians dataset with full EDA, feature selection, model comparison, and hyperparameter tuning — achieving 89.6% accuracy.</p>
+          <div class="pmetrics">
+            <div class="pmbox"><span class="pmval">89.6%</span><span class="pmlbl">Accuracy</span></div>
+            <div class="pmbox"><span class="pmval">768</span><span class="pmlbl">Samples</span></div>
+            <div class="pmbox"><span class="pmval">10+</span><span class="pmlbl">Features</span></div>
+            <div class="pmbox"><span class="pmval">RF</span><span class="pmlbl">Algorithm</span></div>
+          </div>
+          <div class="pstack"><span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>Pickle</span></div>
+          <div class="pbtns">
+            <a href="https://early-diabetes-prediction-1atp.vercel.app/" target="_blank" class="btn btn-p btn-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20"/></svg>Live Demo
+            </a>
+            <a href="https://github.com/amazaikhan6677-del/Early-Diabetes-Prediction/tree/main/fyp" target="_blank" class="btn btn-o btn-sm">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>GitHub
+            </a>
+          </div>
+        </div>
+        <div class="pfc-right">
+          <div class="pimg-wrap">
+            <img src="static/images/Diabetes.webp" alt="Diabetes Prediction System" loading="eager" fetchpriority="high" style="width:100%;height:260px;object-fit:cover;display:block;"/>
+            <div class="pimg-ov">
+              <div class="accw">
+                <span class="acclbl">Model Accuracy</span>
+                <div class="acctrack"><div class="accbar"></div></div>
+                <span class="accnum">89.6%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WEB PROJECTS -->
+    <div class="web-ph" data-aos="fade-up">
+      <div class="sec-label" style="margin:0"><span class="lline"></span>Web Projects<span class="lline"></span></div>
+    </div>
+    <div class="pgrid">
+      <article class="pcard" data-aos="fade-up" data-aos-delay="100">
+        <div class="pcimg">
+          <img src="static/images/home.png" alt="Qatar Home Maintenance" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
+          <div class="pcov">
+            <a href="https://qatarhomemaintenance.com/" target="_blank" class="pcprev">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>Preview
+            </a>
+          </div>
+          <span class="pcbadge">🔧 Service Website</span>
+        </div>
+        <div class="pcbody">
+          <h3 class="pctitle">Qatar Home Maintenance</h3>
+          <p class="pcdesc">Professional service website for a Qatar-based home maintenance company with WhatsApp booking and mobile-first design.</p>
+          <ul class="pcfeat">
+            <li>✦ WhatsApp booking integration</li>
+            <li>✦ Service categories &amp; pricing</li>
+            <li>✦ Mobile-first responsive design</li>
+          </ul>
+          <div class="pcstack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Python</span></div>
+          <div class="pclinks">
+            <a href="https://qatarhomemaintenance.com/" target="_blank" class="btn btn-p btn-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/></svg>Live Demo
+            </a>
+            <a href="https://github.com/amazaikhan6677-del/QATER-HOME-MAINTENENCE" target="_blank" class="btn-g">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard" data-aos="fade-up" data-aos-delay="200">
+        <div class="pcimg">
+          <img src="static/images/maid.webp" alt="Qatar House Maid Services" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
+          <div class="pcov">
+            <a href="https://qatarhousemaid.com/" target="_blank" class="pcprev">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>Preview
+            </a>
+          </div>
+          <span class="pcbadge">🏠 Service Platform</span>
+        </div>
+        <div class="pcbody">
+          <h3 class="pctitle">Qatar House Maid Services</h3>
+          <p class="pcdesc">Professional hiring platform for house maid services in Qatar with staff profiles, service packages, and a trust-building design.</p>
+          <ul class="pcfeat">
+            <li>✦ Staff profiles &amp; packages</li>
+            <li>✦ Inquiry &amp; booking system</li>
+            <li>✦ SEO-optimized structure</li>
+          </ul>
+          <div class="pcstack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>PHP</span></div>
+          <div class="pclinks">
+            <a href="https://qatarhousemaid.com/" target="_blank" class="btn btn-p btn-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/></svg>Live Demo
+            </a>
+            <a href="https://github.com/amazaikhan6677-del/House-Maid-Service-/tree/main/house%20keeping" target="_blank" class="btn-g">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CV SECTION -->
+<section id="cv" class="cvsec sec">
+  <div class="container">
+    <div class="sec-label" data-aos="fade-up"><span class="lline"></span>Resume<span class="lline"></span></div>
+    <h2 class="sec-h2" data-aos="fade-up" data-aos-delay="50">My <span class="gt">Curriculum Vitae</span></h2>
+    <p class="sec-p" data-aos="fade-up" data-aos-delay="100">View or download my full resume below.</p>
+
+    <div style="max-width:860px;margin:0 auto;" data-aos="fade-up" data-aos-delay="150">
+      <!-- Buttons -->
+      <div class="cv-acts" style="display:flex;justify-content:center;gap:1rem;margin-bottom:1.75rem;flex-wrap:wrap;">
+        <a href="public/cv.pdf" target="_blank" class="btn btn-p">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          View Full CV
+        </a>
+        <a href="public/cv.pdf" download="ZAKA_ULLAH_CV.pdf" class="btn btn-o">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download PDF
+        </a>
+      </div>
+
+      <!-- CV Iframe Embed -->
+      <div class="cv-iframe-wrap">
+        <iframe src="public/cv.pdf" title="ZAKA ULLAH CV" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact sec">
+  <div class="container">
+    <div class="sec-label" data-aos="fade-up"><span class="lline"></span>Contact<span class="lline"></span></div>
+    <h2 class="sec-h2" data-aos="fade-up" data-aos-delay="50">Let's <span class="gt">Build Together</span></h2>
+    <p class="sec-p" data-aos="fade-up" data-aos-delay="100">Open for internships, freelance projects, and full-time roles.</p>
+    <div class="contact-layout">
+      <div data-aos="fade-right" data-aos-delay="100">
+        <div class="ctimg-wrap">
+          <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=500&q=80&fit=crop" alt="AI Work" loading="lazy" style="width:100%;height:250px;object-fit:cover;"/>
+          <span class="ctimg-tag">Available Now ✓</span>
+        </div>
+        <div class="chs">
+          <a href="mailto:amazaikhan7@gmail.com" class="ch ch-email">
+            <div class="ch-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><span class="ch-lbl">Email</span><span class="ch-val">amazaikhan7@gmail.com</span></div>
+            <svg class="ch-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://wa.me/923441556864?text=Hi%20Zaka,%20I%20saw%20your%20portfolio!" target="_blank" class="ch ch-wa">
+            <div class="ch-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+            <div><span class="ch-lbl">WhatsApp</span><span class="ch-val">Chat Instantly</span></div>
+            <svg class="ch-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://github.com/amazaikhan6677-del" target="_blank" class="ch ch-gh">
+            <div class="ch-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></div>
+            <div><span class="ch-lbl">GitHub</span><span class="ch-val">amazaikhan6677-del</span></div>
+            <svg class="ch-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="cf-wrap" data-aos="fade-left" data-aos-delay="150">
+        <form class="cf" id="contactForm" novalidate>
+          <div class="cf-row">
+            <div class="cfg"><label for="cf-name">Full Name *</label><input type="text" id="cf-name" name="name" placeholder="Your Name" required autocomplete="name"/><span class="cerr" id="err-name"></span></div>
+            <div class="cfg"><label for="cf-email">Email *</label><input type="email" id="cf-email" name="email" placeholder="your@email.com" required autocomplete="email"/><span class="cerr" id="err-email"></span></div>
+          </div>
+          <div class="cf-row">
+            <div class="cfg"><label for="cf-phone">Phone / WhatsApp</label><input type="tel" id="cf-phone" name="phone" placeholder="+92 344 1556864" autocomplete="tel"/></div>
+            <div class="cfg">
+              <label for="cf-subject">Subject *</label>
+              <select id="cf-subject" name="subject" required>
+                <option value="" disabled selected>Select a topic</option>
+                <option>AI / ML Project</option>
+                <option>Web Development</option>
+                <option>Job / Internship</option>
+                <option>Freelance Work</option>
+                <option>General Inquiry</option>
+              </select>
+            </div>
+          </div>
+          <div class="cfg"><label for="cf-message">Message *</label><textarea id="cf-message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea><span class="cerr" id="err-message"></span></div>
+          <button type="submit" class="cf-sub" id="cfSubmit">
+            <span class="cf-binn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Send Message</span>
+            <span class="cf-bload" style="display:none"><svg class="spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" stroke-opacity=".25"/><path d="M12 2a10 10 0 0110 10"/></svg>Sending…</span>
+          </button>
+          <div class="cf-status" id="cfStatus"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="fbrand">
+        <div class="flogo">
+          <div class="logo-mark">ZU</div>
+          <div><div class="logo-name">ZAKA ULLAH</div><div class="logo-role">AI &amp; ML Engineer</div></div>
+        </div>
+        <p>Building intelligent systems &amp; real-world web solutions that create measurable impact.</p>
+      </div>
+      <div class="fnav">
+        <strong>Navigate</strong>
+        <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+        <a href="#projects">Projects</a><a href="#cv">Resume</a><a href="#contact">Contact</a>
+      </div>
+      <div class="fcont">
+        <strong>Get In Touch</strong>
+        <a href="mailto:amazaikhan7@gmail.com">📧 amazaikhan7@gmail.com</a>
+        <a href="https://wa.me/923441556864" target="_blank">💬 WhatsApp Chat</a>
+        <a href="https://github.com/amazaikhan6677-del" target="_blank">🐙 GitHub Profile</a>
+        <div class="favail"><span class="adot"></span>Available for opportunities</div>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <span>© 2026 ZAKA ULLAH. All rights reserved.</span>
+      <span>Built with precision · Deployed on <strong>Vercel</strong></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="static/js/script.js"></script>
+</body>
+</html>
